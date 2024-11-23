@@ -1,0 +1,323 @@
+
+*** Running vivado
+    with args -log TopLevelModule.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source TopLevelModule.tcl
+
+
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source TopLevelModule.tcl -notrace
+Command: synth_design -top TopLevelModule -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 13000
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1024.387 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'TopLevelModule' [C:/Users/ahmed/dldProject/dldProject.srcs/sources_1/new/TopLevelModule.v:23]
+INFO: [Synth 8-6157] synthesizing module 'vga_controller' [C:/Users/ahmed/dldProject/dldProject.srcs/sources_1/new/vga_controller.v:55]
+	Parameter HD bound to: 640 - type: integer 
+	Parameter HF bound to: 48 - type: integer 
+	Parameter HB bound to: 16 - type: integer 
+	Parameter HR bound to: 96 - type: integer 
+	Parameter HMAX bound to: 799 - type: integer 
+	Parameter VD bound to: 480 - type: integer 
+	Parameter VF bound to: 10 - type: integer 
+	Parameter VB bound to: 33 - type: integer 
+	Parameter VR bound to: 2 - type: integer 
+	Parameter VMAX bound to: 524 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (1#1) [C:/Users/ahmed/dldProject/dldProject.srcs/sources_1/new/vga_controller.v:55]
+INFO: [Synth 8-6157] synthesizing module 'PS2Receiver' [C:/Users/ahmed/dldProject/dldProject.srcs/sources_1/new/PS2Receiver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [C:/Users/ahmed/dldProject/dldProject.srcs/sources_1/new/debounce.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (2#1) [C:/Users/ahmed/dldProject/dldProject.srcs/sources_1/new/debounce.v:25]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ahmed/dldProject/dldProject.srcs/sources_1/new/PS2Receiver.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'PS2Receiver' (3#1) [C:/Users/ahmed/dldProject/dldProject.srcs/sources_1/new/PS2Receiver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'pixel_gen' [C:/Users/ahmed/dldProject/dldProject.srcs/sources_1/new/pixel_gen.v:4]
+	Parameter X_MAX bound to: 639 - type: integer 
+	Parameter Y_MAX bound to: 479 - type: integer 
+	Parameter X_WALL_L bound to: 32 - type: integer 
+	Parameter X_WALL_R bound to: 39 - type: integer 
+	Parameter X_BLOCK1_L bound to: 150 - type: integer 
+	Parameter X_BLOCK1_R bound to: 153 - type: integer 
+	Parameter Y_BLOCK1_T bound to: 0 - type: integer 
+	Parameter Y_BLOCK1_B bound to: 60 - type: integer 
+	Parameter X_BLOCK2_L bound to: 150 - type: integer 
+	Parameter X_BLOCK2_R bound to: 153 - type: integer 
+	Parameter Y_BLOCK2_T bound to: 140 - type: integer 
+	Parameter Y_BLOCK2_B bound to: 200 - type: integer 
+	Parameter X_BLOCK3_L bound to: 150 - type: integer 
+	Parameter X_BLOCK3_R bound to: 153 - type: integer 
+	Parameter Y_BLOCK3_T bound to: 280 - type: integer 
+	Parameter Y_BLOCK3_B bound to: 340 - type: integer 
+	Parameter X_BLOCK4_L bound to: 150 - type: integer 
+	Parameter X_BLOCK4_R bound to: 153 - type: integer 
+	Parameter Y_BLOCK4_T bound to: 420 - type: integer 
+	Parameter Y_BLOCK4_B bound to: 480 - type: integer 
+	Parameter X_BLOCK21_L bound to: 250 - type: integer 
+	Parameter X_BLOCK21_R bound to: 253 - type: integer 
+	Parameter Y_BLOCK21_T bound to: 70 - type: integer 
+	Parameter Y_BLOCK21_B bound to: 130 - type: integer 
+	Parameter X_BLOCK22_L bound to: 250 - type: integer 
+	Parameter X_BLOCK22_R bound to: 253 - type: integer 
+	Parameter Y_BLOCK22_T bound to: 210 - type: integer 
+	Parameter Y_BLOCK22_B bound to: 270 - type: integer 
+	Parameter X_BLOCK23_L bound to: 250 - type: integer 
+	Parameter X_BLOCK23_R bound to: 253 - type: integer 
+	Parameter Y_BLOCK23_T bound to: 350 - type: integer 
+	Parameter Y_BLOCK23_B bound to: 410 - type: integer 
+	Parameter X_BLOCK31_L bound to: 350 - type: integer 
+	Parameter X_BLOCK31_R bound to: 353 - type: integer 
+	Parameter Y_BLOCK31_T bound to: 0 - type: integer 
+	Parameter Y_BLOCK31_B bound to: 60 - type: integer 
+	Parameter X_BLOCK32_L bound to: 350 - type: integer 
+	Parameter X_BLOCK32_R bound to: 353 - type: integer 
+	Parameter Y_BLOCK32_T bound to: 140 - type: integer 
+	Parameter Y_BLOCK32_B bound to: 200 - type: integer 
+	Parameter X_BLOCK33_L bound to: 350 - type: integer 
+	Parameter X_BLOCK33_R bound to: 353 - type: integer 
+	Parameter Y_BLOCK33_T bound to: 280 - type: integer 
+	Parameter Y_BLOCK33_B bound to: 340 - type: integer 
+	Parameter X_BLOCK34_L bound to: 350 - type: integer 
+	Parameter X_BLOCK34_R bound to: 353 - type: integer 
+	Parameter Y_BLOCK34_T bound to: 420 - type: integer 
+	Parameter Y_BLOCK34_B bound to: 480 - type: integer 
+	Parameter X_BLOCK41_L bound to: 450 - type: integer 
+	Parameter X_BLOCK41_R bound to: 453 - type: integer 
+	Parameter Y_BLOCK41_T bound to: 70 - type: integer 
+	Parameter Y_BLOCK41_B bound to: 130 - type: integer 
+	Parameter X_BLOCK42_L bound to: 450 - type: integer 
+	Parameter X_BLOCK42_R bound to: 453 - type: integer 
+	Parameter Y_BLOCK42_T bound to: 210 - type: integer 
+	Parameter Y_BLOCK42_B bound to: 270 - type: integer 
+	Parameter X_BLOCK43_L bound to: 450 - type: integer 
+	Parameter X_BLOCK43_R bound to: 453 - type: integer 
+	Parameter Y_BLOCK43_T bound to: 350 - type: integer 
+	Parameter Y_BLOCK43_B bound to: 410 - type: integer 
+	Parameter X_PAD_L bound to: 600 - type: integer 
+	Parameter X_PAD_R bound to: 603 - type: integer 
+	Parameter PAD_HEIGHT bound to: 72 - type: integer 
+	Parameter PAD_VELOCITY bound to: 30 - type: integer 
+	Parameter BALL_SIZE bound to: 8 - type: integer 
+	Parameter BALL_VELOCITY_POS bound to: 1 - type: integer 
+	Parameter BALL_VELOCITY_NEG bound to: -1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pixel_gen' (4#1) [C:/Users/ahmed/dldProject/dldProject.srcs/sources_1/new/pixel_gen.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'TopLevelModule' (5#1) [C:/Users/ahmed/dldProject/dldProject.srcs/sources_1/new/TopLevelModule.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1024.387 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1024.387 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1024.387 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1024.387 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/ahmed/dldProject/dldProject.srcs/constrs_1/new/constraints_dldproj.xdc]
+Finished Parsing XDC File [C:/Users/ahmed/dldProject/dldProject.srcs/constrs_1/new/constraints_dldproj.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/ahmed/dldProject/dldProject.srcs/constrs_1/new/constraints_dldproj.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TopLevelModule_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/TopLevelModule_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1038.750 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1038.750 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1038.750 ; gain = 14.363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1038.750 ; gain = 14.363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1038.750 ; gain = 14.363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1038.750 ; gain = 14.363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   10 Bit       Adders := 8     
+	   2 Input    4 Bit       Adders := 1     
+	   3 Input    3 Bit       Adders := 2     
+	   2 Input    2 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 10    
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 17    
++---Muxes : 
+	   6 Input   12 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 14    
+	   3 Input   10 Bit        Muxes := 1     
+	   5 Input   10 Bit        Muxes := 2     
+	   8 Input    8 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 19    
+	   3 Input    1 Bit        Muxes := 1     
+	  12 Input    1 Bit        Muxes := 2     
+	   7 Input    1 Bit        Muxes := 11    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1038.750 ; gain = 14.363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1038.750 ; gain = 14.363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1054.004 ; gain = 29.617
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1063.074 ; gain = 38.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1066.836 ; gain = 42.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1066.836 ; gain = 42.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1066.836 ; gain = 42.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1066.836 ; gain = 42.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1066.836 ; gain = 42.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1066.836 ; gain = 42.449
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    25|
+|3     |LUT1   |     6|
+|4     |LUT2   |    35|
+|5     |LUT3   |    28|
+|6     |LUT4   |   100|
+|7     |LUT5   |    61|
+|8     |LUT6   |   144|
+|9     |FDCE   |    81|
+|10    |FDPE   |    18|
+|11    |FDRE   |    38|
+|12    |LDC    |    11|
+|13    |IBUF   |     3|
+|14    |OBUF   |    15|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1066.836 ; gain = 42.449
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 1066.836 ; gain = 28.086
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1066.836 ; gain = 42.449
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1078.883 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 36 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1078.883 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 11 instances were transformed.
+  LDC => LDCE: 11 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+26 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1078.883 ; gain = 54.496
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ahmed/dldProject/dldProject.runs/synth_1/TopLevelModule.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file TopLevelModule_utilization_synth.rpt -pb TopLevelModule_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 21 15:56:45 2024...
