@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Thu Nov 21 15:57:32 2024
+| Date         : Sat Nov 23 23:35:16 2024
 | Host         : LAPTOP-RL1G882R running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file TopLevelModule_control_sets_placed.rpt
 | Design       : TopLevelModule
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    45 |
-|    Minimum number of control sets                        |    45 |
+| Total control sets                                       |    52 |
+|    Minimum number of control sets                        |    52 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |   275 |
+| Unused register locations in slices containing registers |   317 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    45 |
-| >= 0 to < 4        |    34 |
-| >= 4 to < 6        |     1 |
+| Total control sets |    52 |
+| >= 0 to < 4        |    36 |
+| >= 4 to < 6        |     3 |
 | >= 6 to < 8        |     1 |
 | >= 8 to < 10       |     3 |
-| >= 10 to < 12      |     3 |
-| >= 12 to < 14      |     1 |
+| >= 10 to < 12      |     5 |
+| >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     2 |
+| >= 16              |     4 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -59,10 +59,10 @@ Table of Contents
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |              17 |            6 |
-| No           | No                    | Yes                    |              57 |           39 |
-| No           | Yes                   | No                     |              17 |           16 |
-| Yes          | No                    | No                     |              20 |            7 |
-| Yes          | No                    | Yes                    |              42 |           18 |
+| No           | No                    | Yes                    |              66 |           46 |
+| No           | Yes                   | No                     |              20 |           19 |
+| Yes          | No                    | No                     |               8 |            2 |
+| Yes          | No                    | Yes                    |             104 |           42 |
 | Yes          | Yes                   | No                     |               4 |            1 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -70,54 +70,61 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+------------------------------------+-------------------------+-----------------------------------+------------------+----------------+--------------+
-|            Clock Signal            |      Enable Signal      |          Set/Reset Signal         | Slice Load Count | Bel Load Count | Bels / Slice |
-+------------------------------------+-------------------------+-----------------------------------+------------------+----------------+--------------+
-|  pg/x_delta_reg_reg[0]_LDC_i_1_n_0 |                         | w_back_reg_n_0                    |                1 |              1 |         1.00 |
-|  pg/y_pad_next_reg[4]_LDC_i_1_n_0  |                         | pg/y_pad_next_reg[4]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
-|  pg/y_pad_next_reg[8]_LDC_i_1_n_0  |                         | pg/y_pad_next_reg[8]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
-|  pg/y_pad_next_reg[6]_LDC_i_1_n_0  |                         | pg/y_pad_next_reg[6]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
-|  pg/y_pad_next_reg[3]_LDC_i_1_n_0  |                         | pg/y_pad_next_reg[3]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
-|  pg/y_pad_next_reg[2]_LDC_i_1_n_0  |                         | pg/y_pad_next_reg[2]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
-|  pg/y_pad_next_reg[0]_LDC_i_1_n_0  |                         | pg/y_pad_next_reg[0]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
-|  pg/y_pad_next_reg[5]_LDC_i_1_n_0  |                         | pg/y_pad_next_reg[5]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
-|  pg/y_pad_next_reg[9]_LDC_i_1_n_0  |                         | pg/y_pad_next_reg[9]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
-|  pg/y_pad_next_reg[1]_LDC_i_1_n_0  |                         | pg/y_pad_next_reg[1]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
-|  pg/y_pad_next_reg[7]_LDC_i_1_n_0  |                         | pg/y_pad_next_reg[7]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
-|  clk_100MHz_IBUF_BUFG              |                         | pg/y_pad_next_reg[7]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
-|  clk_100MHz_IBUF_BUFG              |                         | pg/y_pad_next_reg[1]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
-|  clk_100MHz_IBUF_BUFG              | pg/x_delta_reg          | pg/x_delta_reg_reg[0]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
-|  clk_100MHz_IBUF_BUFG              | pg/x_delta_reg          | pg/x_delta_reg[9]_i_3_n_0         |                1 |              1 |         1.00 |
-|  clk_100MHz_IBUF_BUFG              |                         | pg/y_pad_next_reg[4]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
-|  clk_100MHz_IBUF_BUFG              |                         | pg/y_pad_next_reg[2]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
-|  clk_100MHz_IBUF_BUFG              |                         | pg/y_pad_next_reg[7]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
-|  clk_100MHz_IBUF_BUFG              |                         | pg/y_pad_next_reg[8]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
-|  clk_100MHz_IBUF_BUFG              |                         | pg/y_pad_next_reg[6]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
-|  clk_100MHz_IBUF_BUFG              |                         | pg/y_pad_next_reg[3]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
-|  clk_100MHz_IBUF_BUFG              |                         | pg/y_pad_next_reg[4]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
-|  clk_100MHz_IBUF_BUFG              |                         | pg/y_pad_next_reg[6]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
-|  clk_100MHz_IBUF_BUFG              |                         | pg/y_pad_next_reg[3]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
-|  clk_100MHz_IBUF_BUFG              |                         | pg/y_pad_next_reg[8]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
-|  clk_100MHz_IBUF_BUFG              |                         | pg/y_pad_next_reg[9]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
-|  clk_100MHz_IBUF_BUFG              |                         | pg/y_pad_next_reg[0]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
-|  clk_100MHz_IBUF_BUFG              |                         | pg/y_pad_next_reg[2]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
-|  clk_100MHz_IBUF_BUFG              |                         | pg/y_pad_next_reg[5]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
-|  clk_100MHz_IBUF_BUFG              |                         | pg/y_pad_next_reg[0]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
-|  clk_100MHz_IBUF_BUFG              |                         | pg/y_pad_next_reg[5]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
-|  clk_100MHz_IBUF_BUFG              |                         | pg/y_pad_next_reg[9]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
-|  clk_100MHz_IBUF_BUFG              |                         | pg/y_pad_next_reg[1]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
-|  clk_100MHz_IBUF_BUFG              |                         | w_back_reg_n_0                    |                2 |              3 |         1.50 |
-| ~P1/db_clk/r3_reg_0                | P1/cnt                  | P1/cnt[3]_i_1_n_0                 |                1 |              4 |         4.00 |
-|  clk_100MHz_IBUF_BUFG              |                         | P1/p_0_in                         |                5 |              6 |         1.20 |
-|  clk_100MHz_IBUF_BUFG              |                         |                                   |                3 |              8 |         2.67 |
-|  clk_100MHz_IBUF_BUFG              | P1/oflag_i_1_n_0        |                                   |                2 |              8 |         4.00 |
-| ~P1/db_clk/r3_reg_0                |                         |                                   |                3 |              9 |         3.00 |
-|  vga/r_25MHz_reg[1]_0[0]           |                         | w_reset_reg_n_0                   |                5 |             10 |         2.00 |
-|  vga/r_25MHz_reg[1]_0[0]           | vga/v_count_next        | w_reset_reg_n_0                   |                5 |             10 |         2.00 |
-|  clk_100MHz_IBUF_BUFG              | pg/y_pad_reg            | w_back_reg_n_0                    |                5 |             10 |         2.00 |
-|  clk_100MHz_IBUF_BUFG              | vga/r_25MHz_reg[1]_0[0] |                                   |                5 |             12 |         2.40 |
-|  clk_100MHz_IBUF_BUFG              | vga/E[0]                | w_back_reg_n_0                    |                6 |             20 |         3.33 |
-|  clk_100MHz_IBUF_BUFG              |                         | w_reset_reg_n_0                   |               12 |             24 |         2.00 |
-+------------------------------------+-------------------------+-----------------------------------+------------------+----------------+--------------+
++------------------------------------+--------------------------------+-----------------------------------+------------------+----------------+--------------+
+|            Clock Signal            |          Enable Signal         |          Set/Reset Signal         | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------------------+--------------------------------+-----------------------------------+------------------+----------------+--------------+
+|  pg/y_pad_next_reg[4]_LDC_i_1_n_0  |                                | pg/y_pad_next_reg[4]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG              |                                | pg/y_pad_next_reg[5]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG              |                                | pg/y_pad_next_reg[7]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
+|  pg/y_pad_next_reg[0]_LDC_i_1_n_0  |                                | pg/y_pad_next_reg[0]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
+|  pg/y_pad_next_reg[2]_LDC_i_1_n_0  |                                | pg/y_pad_next_reg[2]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
+|  pg/y_pad_next_reg[1]_LDC_i_1_n_0  |                                | pg/y_pad_next_reg[1]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
+|  pg/y_pad_next_reg[7]_LDC_i_1_n_0  |                                | pg/y_pad_next_reg[7]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
+|  pg/y_pad_next_reg[3]_LDC_i_1_n_0  |                                | pg/y_pad_next_reg[3]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
+|  pg/y_pad_next_reg[9]_LDC_i_1_n_0  |                                | pg/y_pad_next_reg[9]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
+|  pg/y_pad_next_reg[8]_LDC_i_1_n_0  |                                | pg/y_pad_next_reg[8]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
+|  pg/y_pad_next_reg[6]_LDC_i_1_n_0  |                                | pg/y_pad_next_reg[6]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
+|  pg/y_pad_next_reg[5]_LDC_i_1_n_0  |                                | pg/y_pad_next_reg[5]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG              |                                | pg/y_pad_next_reg[7]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG              | pg/x_delta_reg                 | pg/x_delta_reg[9]_i_3_n_0         |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG              | sg/x_delta_reg[0]_P_i_1_n_0    | sg/w_start_reg                    |                1 |              1 |         1.00 |
+|  pg/x_delta_reg_reg[0]_LDC_i_1_n_0 |                                | w_back_reg_n_0                    |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG              | pg/x_delta_reg                 | pg/x_delta_reg_reg[0]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG              | eg/x_delta_reg[0]_P_i_1__1_n_0 | sg/w_start_reg                    |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG              |                                | pg/y_pad_next_reg[1]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG              |                                | pg/y_pad_next_reg[0]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG              |                                | pg/y_pad_next_reg[2]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG              |                                | pg/y_pad_next_reg[3]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG              |                                | pg/y_pad_next_reg[1]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG              |                                | pg/y_pad_next_reg[0]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG              |                                | pg/y_pad_next_reg[4]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG              |                                | pg/y_pad_next_reg[4]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG              |                                | pg/y_pad_next_reg[2]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG              |                                | pg/y_pad_next_reg[3]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG              |                                | pg/y_pad_next_reg[9]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG              |                                | pg/y_pad_next_reg[9]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG              |                                | pg/y_pad_next_reg[8]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG              |                                | pg/y_pad_next_reg[8]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG              |                                | pg/y_pad_next_reg[6]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG              |                                | pg/y_pad_next_reg[5]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
+|  clk_100MHz_IBUF_BUFG              |                                | pg/y_pad_next_reg[6]_LDC_i_2_n_0  |                1 |              1 |         1.00 |
+|  sg/w_start_reg                    |                                | w_back_reg_n_0                    |                2 |              2 |         1.00 |
+| ~P1/db_clk/r3_reg_0                | P1/cnt                         | P1/cnt[3]_i_1_n_0                 |                1 |              4 |         4.00 |
+|  clk_100MHz_IBUF_BUFG              |                                | sg/w_start_reg_0                  |                4 |              4 |         1.00 |
+|  clk_100MHz_IBUF_BUFG              |                                | w_back_reg_n_0                    |                5 |              5 |         1.00 |
+|  clk_100MHz_IBUF_BUFG              |                                | P1/p_0_in                         |                6 |              7 |         1.17 |
+|  clk_100MHz_IBUF_BUFG              |                                |                                   |                3 |              8 |         2.67 |
+|  clk_100MHz_IBUF_BUFG              | P1/oflag_i_1_n_0               |                                   |                2 |              8 |         4.00 |
+| ~P1/db_clk/r3_reg_0                |                                |                                   |                3 |              9 |         3.00 |
+|  vga/h_count_next[9]_i_2_n_0       |                                | w_reset_reg_n_0                   |                4 |             10 |         2.50 |
+|  vga/h_count_next[9]_i_2_n_0       | vga/v_count_next               | w_reset_reg_n_0                   |                8 |             10 |         1.25 |
+|  clk_100MHz_IBUF_BUFG              | sg/y_pad_reg                   | w_back_reg_n_0                    |                4 |             10 |         2.50 |
+|  clk_100MHz_IBUF_BUFG              | pg/y_pad_reg                   | w_back_reg_n_0                    |                4 |             10 |         2.50 |
+|  clk_100MHz_IBUF_BUFG              | eg/y_pad_reg                   | w_back_reg_n_0                    |                4 |             10 |         2.50 |
+|  clk_100MHz_IBUF_BUFG              | sg/x_ball_reg                  | w_back_reg_n_0                    |                6 |             20 |         3.33 |
+|  clk_100MHz_IBUF_BUFG              | eg/x_ball_reg                  | w_back_reg_n_0                    |                6 |             20 |         3.33 |
+|  clk_100MHz_IBUF_BUFG              | vga/E[0]                       | w_back_reg_n_0                    |                6 |             20 |         3.33 |
+|  clk_100MHz_IBUF_BUFG              |                                | w_reset_reg_n_0                   |               13 |             27 |         2.08 |
++------------------------------------+--------------------------------+-----------------------------------+------------------+----------------+--------------+
 
 

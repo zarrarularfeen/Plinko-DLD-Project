@@ -11,7 +11,8 @@ module pixel_gen(
     input [9:0] x,
     input [9:0] y,
     output reg [11:0] rgb,
-    input enable
+    input enable,
+    output endgame
     );
     
     // maximum x, y values in display area
@@ -150,28 +151,28 @@ module pixel_gen(
     wire rom_bit;                   // signify when rom data is 1 or 0 for ball rgb control
     
     // Register Control
-    always @(posedge clk or posedge reset or posedge start or posedge up or posedge down)
+    always @(posedge clk or posedge reset or posedge start or posedge up or posedge down )
     begin
-        if(reset == 1) begin
+        if(reset) begin
             y_pad_reg <= 0;
             x_ball_reg <= 9'b000010010;
             y_ball_reg <= 9'b011110000;
             x_delta_reg <= 10'h000;
             y_delta_reg <= 10'h001; 
         end
-        else if (start == 1)
+        else if (start && enable)
         begin
             
             x_delta_reg <= 10'h001;
 //            y_delta_reg <= 10'h001; 
         end
-        else if (up == 1)
+        else if (up)
         begin
             y_pad_next <= y_pad_reg;     // no move
             if(y_pad_t > PAD_VELOCITY)            
                 y_pad_next <= y_pad_reg - PAD_VELOCITY;
         end
-        else if (down == 1)
+        else if (down)
         begin 
         y_pad_next <= y_pad_reg;     // no move
         if( y_pad_b < (Y_MAX - PAD_VELOCITY))
@@ -182,7 +183,8 @@ module pixel_gen(
             x_ball_reg <= 9'b000010010;
             y_ball_reg <= 9'b011110000;
             x_delta_reg <= 10'h000;
-            y_delta_reg <= 10'h001; 
+            y_delta_reg <= 10'h001;
+             
         end
         else begin
             y_pad_reg <= y_pad_next;
@@ -360,7 +362,11 @@ module pixel_gen(
         && (Y_BLOCK43_T <= y_ball_b) && (y_ball_t <= Y_BLOCK43_B))
         )                               // collide with wall
             x_delta_next = BALL_VELOCITY_POS; 
-    end                    
+    end
+   
+     
+     assign endgame = (x_ball_l > X_MAX) ? 1 : 0;    
+                       
     
     // rgb multiplexing circuit
     always @*

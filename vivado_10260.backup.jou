@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sat Nov 23 15:15:18 2024
+# Process ID: 10260
+# Current directory: C:/Users/NM TRADERS/Documents/Courses Assignments/Fall Semester 2024 - 3/CS 130 - Digital Logic and Design/dldProject/Plinko-DLD-Project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25996 C:\Users\NM TRADERS\Documents\Courses Assignments\Fall Semester 2024 - 3\CS 130 - Digital Logic and Design\dldProject\Plinko-DLD-Project\dldProject.xpr
+# Log file: C:/Users/NM TRADERS/Documents/Courses Assignments/Fall Semester 2024 - 3/CS 130 - Digital Logic and Design/dldProject/Plinko-DLD-Project/vivado.log
+# Journal file: C:/Users/NM TRADERS/Documents/Courses Assignments/Fall Semester 2024 - 3/CS 130 - Digital Logic and Design/dldProject/Plinko-DLD-Project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/NM TRADERS/Documents/Courses Assignments/Fall Semester 2024 - 3/CS 130 - Digital Logic and Design/dldProject/Plinko-DLD-Project/dldProject.xpr}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1

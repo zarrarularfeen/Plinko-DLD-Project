@@ -2,11 +2,11 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Thu Nov 21 15:56:12 2024
-# Process ID: 4188
-# Current directory: C:/Users/ahmed/dldProject/dldProject.runs/synth_1
+# Start of session at: Sat Nov 23 23:33:43 2024
+# Process ID: 21236
+# Current directory: C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.runs/synth_1
 # Command line: vivado.exe -log TopLevelModule.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TopLevelModule.tcl
-# Log file: C:/Users/ahmed/dldProject/dldProject.runs/synth_1/TopLevelModule.vds
-# Journal file: C:/Users/ahmed/dldProject/dldProject.runs/synth_1\vivado.jou
+# Log file: C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.runs/synth_1/TopLevelModule.vds
+# Journal file: C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source TopLevelModule.tcl -notrace

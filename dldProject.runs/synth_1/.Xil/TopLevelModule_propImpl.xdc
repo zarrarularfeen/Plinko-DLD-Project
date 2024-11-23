@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/ahmed/dldProject/dldProject.srcs/constrs_1/new/constraints_dldproj.xdc rfile:../../../dldProject.srcs/constrs_1/new/constraints_dldproj.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.srcs/constrs_1/new/constraints_dldproj.xdc rfile:../../../dldProject.srcs/constrs_1/new/constraints_dldproj.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN W5 [get_ports clk_100MHz]
 set_property src_info {type:XDC file:1 line:10 export:INPUT save:INPUT read:READ} [current_design]

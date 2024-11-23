@@ -106,9 +106,10 @@ input clk_100MHz,       // from Basys 3
     
     // DEFINING INTERNAL ENABLE SIGNALS
     reg enable_startscreen, enable_game, enable_endscreen;
-    
     // DEFINING INTERNAL WIRES FOR RGB, HSYNC, AND VSYNC SIGNALS
-    wire [11:0] start_rgb, game_rgb, end_rgb;
+    wire [11:0] start_rgb, game_rgb, end_rgb ,endgame;
+    
+    
     wire start_hsync, start_vsync;
     wire game_hsync, game_vsync;
     wire end_hsync, end_vsync;
@@ -117,8 +118,8 @@ input clk_100MHz,       // from Basys 3
     startscreen_gen sg(.clk(clk_100MHz),.reset(w_back),.start(w_start), .up(w_up), .down(w_down), 
                  .video_on(w_vid_on), .x(w_x), .y(w_y), .rgb(start_rgb));
     
-    pixel_gen pg(.clk(clk_100MHz),.reset(w_back),.start(w_start), .up(w_up), .down(w_down), 
-                 .video_on(w_vid_on), .x(w_x), .y(w_y), .rgb(game_rgb), .enable(enable_game));
+    pixel_gen pg(.clk(clk_100MHz),.reset(w_back),.start(w_startgame), .up(w_up), .down(w_down), 
+                 .video_on(w_vid_on), .x(w_x), .y(w_y), .rgb(game_rgb), .enable(enable_game), .endgame(endgame));
                  
     endscreen_gen eg(.clk(clk_100MHz),.reset(w_back),.start(w_start), .up(w_up), .down(w_down), 
                  .video_on(w_vid_on), .x(w_x), .y(w_y), .rgb(end_rgb));
@@ -127,6 +128,7 @@ input clk_100MHz,       // from Basys 3
                  
     // STATE MACHINE
     always @(posedge clk_100MHz or posedge w_reset) begin
+        
         if (w_reset) 
             state <= START_SCREEN_STATE;
         else 
@@ -141,13 +143,15 @@ input clk_100MHz,       // from Basys 3
 //        reg w_reset,w_start, w_up, w_down, w_back,w_startgame;
         case (state)
             START_SCREEN_STATE: begin
+                
                 enable_startscreen = 1'b1; // Enable the start screen
                 if (w_start) 
                     next_state = GAME_STATE; // Transition to game state on button press
             end
             GAME_STATE: begin
                 enable_game = 1'b1; // Enable the game module
-                if (w_startgame)
+                
+                if (endgame)
                     next_state = END_SCREEN_STATE; // Transition to end screen on game over
             end
             END_SCREEN_STATE: begin

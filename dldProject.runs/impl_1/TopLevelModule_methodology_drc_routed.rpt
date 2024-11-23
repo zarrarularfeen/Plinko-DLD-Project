@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Thu Nov 21 15:57:50 2024
+| Date         : Sat Nov 23 23:35:41 2024
 | Host         : LAPTOP-RL1G882R running 64-bit major release  (build 9200)
 | Command      : report_methodology -file TopLevelModule_methodology_drc_routed.rpt -pb TopLevelModule_methodology_drc_routed.pb -rpx TopLevelModule_methodology_drc_routed.rpx
 | Design       : TopLevelModule
@@ -23,14 +23,14 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 83
+             Violations found: 87
 +-----------+------------------+-------------------------------+------------+
 | Rule      | Severity         | Description                   | Violations |
 +-----------+------------------+-------------------------------+------------+
 | TIMING-17 | Critical Warning | Non-clocked sequential cell   | 33         |
-| LUTAR-1   | Warning          | LUT drives async reset alert  | 22         |
+| LUTAR-1   | Warning          | LUT drives async reset alert  | 24         |
 | TIMING-18 | Warning          | Missing input or output delay | 17         |
-| TIMING-20 | Warning          | Non-clocked latch             | 11         |
+| TIMING-20 | Warning          | Non-clocked latch             | 13         |
 +-----------+------------------+-------------------------------+------------+
 
 2. REPORT DETAILS
@@ -310,6 +310,17 @@ LUT drives async reset alert
 LUT cell pg/y_pad_next_reg[9]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) pg/y_pad_next_reg[9]_C/CLR, pg/y_pad_next_reg[9]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
+LUTAR-1#23 Warning
+LUT drives async reset alert  
+LUT cell sg/x_delta_reg[2]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) eg/x_delta_reg_reg[9]/CLR, eg/y_delta_reg_reg[2]/CLR,
+sg/x_delta_reg_reg[2]/CLR, sg/y_delta_reg_reg[9]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#24 Warning
+LUT drives async reset alert  
+LUT cell sg/x_delta_reg_reg[0]_LDC_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) eg/x_delta_reg_reg[0]_P/PRE, sg/x_delta_reg_reg[0]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
 TIMING-18#1 Warning
 Missing input or output delay  
 An input delay is missing on PS2Clk relative to clock(s) sys_clk_pin
@@ -397,57 +408,67 @@ Related violations: <none>
 
 TIMING-20#1 Warning
 Non-clocked latch  
-The latch pg/x_delta_reg_reg[0]_LDC cannot be properly analyzed as its control pin pg/x_delta_reg_reg[0]_LDC/G is not reached by a timing clock
+The latch eg/x_delta_reg_reg[0]_LDC cannot be properly analyzed as its control pin eg/x_delta_reg_reg[0]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#2 Warning
 Non-clocked latch  
-The latch pg/y_pad_next_reg[0]_LDC cannot be properly analyzed as its control pin pg/y_pad_next_reg[0]_LDC/G is not reached by a timing clock
+The latch pg/x_delta_reg_reg[0]_LDC cannot be properly analyzed as its control pin pg/x_delta_reg_reg[0]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#3 Warning
 Non-clocked latch  
-The latch pg/y_pad_next_reg[1]_LDC cannot be properly analyzed as its control pin pg/y_pad_next_reg[1]_LDC/G is not reached by a timing clock
+The latch pg/y_pad_next_reg[0]_LDC cannot be properly analyzed as its control pin pg/y_pad_next_reg[0]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#4 Warning
 Non-clocked latch  
-The latch pg/y_pad_next_reg[2]_LDC cannot be properly analyzed as its control pin pg/y_pad_next_reg[2]_LDC/G is not reached by a timing clock
+The latch pg/y_pad_next_reg[1]_LDC cannot be properly analyzed as its control pin pg/y_pad_next_reg[1]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#5 Warning
 Non-clocked latch  
-The latch pg/y_pad_next_reg[3]_LDC cannot be properly analyzed as its control pin pg/y_pad_next_reg[3]_LDC/G is not reached by a timing clock
+The latch pg/y_pad_next_reg[2]_LDC cannot be properly analyzed as its control pin pg/y_pad_next_reg[2]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#6 Warning
 Non-clocked latch  
-The latch pg/y_pad_next_reg[4]_LDC cannot be properly analyzed as its control pin pg/y_pad_next_reg[4]_LDC/G is not reached by a timing clock
+The latch pg/y_pad_next_reg[3]_LDC cannot be properly analyzed as its control pin pg/y_pad_next_reg[3]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#7 Warning
 Non-clocked latch  
-The latch pg/y_pad_next_reg[5]_LDC cannot be properly analyzed as its control pin pg/y_pad_next_reg[5]_LDC/G is not reached by a timing clock
+The latch pg/y_pad_next_reg[4]_LDC cannot be properly analyzed as its control pin pg/y_pad_next_reg[4]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#8 Warning
 Non-clocked latch  
-The latch pg/y_pad_next_reg[6]_LDC cannot be properly analyzed as its control pin pg/y_pad_next_reg[6]_LDC/G is not reached by a timing clock
+The latch pg/y_pad_next_reg[5]_LDC cannot be properly analyzed as its control pin pg/y_pad_next_reg[5]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#9 Warning
 Non-clocked latch  
-The latch pg/y_pad_next_reg[7]_LDC cannot be properly analyzed as its control pin pg/y_pad_next_reg[7]_LDC/G is not reached by a timing clock
+The latch pg/y_pad_next_reg[6]_LDC cannot be properly analyzed as its control pin pg/y_pad_next_reg[6]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#10 Warning
 Non-clocked latch  
-The latch pg/y_pad_next_reg[8]_LDC cannot be properly analyzed as its control pin pg/y_pad_next_reg[8]_LDC/G is not reached by a timing clock
+The latch pg/y_pad_next_reg[7]_LDC cannot be properly analyzed as its control pin pg/y_pad_next_reg[7]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#11 Warning
 Non-clocked latch  
+The latch pg/y_pad_next_reg[8]_LDC cannot be properly analyzed as its control pin pg/y_pad_next_reg[8]_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#12 Warning
+Non-clocked latch  
 The latch pg/y_pad_next_reg[9]_LDC cannot be properly analyzed as its control pin pg/y_pad_next_reg[9]_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#13 Warning
+Non-clocked latch  
+The latch sg/x_delta_reg_reg[0]_LDC cannot be properly analyzed as its control pin sg/x_delta_reg_reg[0]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 

@@ -17,12 +17,15 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 13000
+INFO: [Synth 8-7075] Helper process launched with PID 8848
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1024.387 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1024.730 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'TopLevelModule' [C:/Users/ahmed/dldProject/dldProject.srcs/sources_1/new/TopLevelModule.v:23]
-INFO: [Synth 8-6157] synthesizing module 'vga_controller' [C:/Users/ahmed/dldProject/dldProject.srcs/sources_1/new/vga_controller.v:55]
+INFO: [Synth 8-6157] synthesizing module 'TopLevelModule' [C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.srcs/sources_1/new/TopLevelModule.v:4]
+	Parameter START_SCREEN_STATE bound to: 2'b00 
+	Parameter GAME_STATE bound to: 2'b01 
+	Parameter END_SCREEN_STATE bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'vga_controller' [C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.srcs/sources_1/new/vga_controller.v:55]
 	Parameter HD bound to: 640 - type: integer 
 	Parameter HF bound to: 48 - type: integer 
 	Parameter HB bound to: 16 - type: integer 
@@ -33,13 +36,154 @@ INFO: [Synth 8-6157] synthesizing module 'vga_controller' [C:/Users/ahmed/dldPro
 	Parameter VB bound to: 33 - type: integer 
 	Parameter VR bound to: 2 - type: integer 
 	Parameter VMAX bound to: 524 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (1#1) [C:/Users/ahmed/dldProject/dldProject.srcs/sources_1/new/vga_controller.v:55]
-INFO: [Synth 8-6157] synthesizing module 'PS2Receiver' [C:/Users/ahmed/dldProject/dldProject.srcs/sources_1/new/PS2Receiver.v:23]
-INFO: [Synth 8-6157] synthesizing module 'debounce' [C:/Users/ahmed/dldProject/dldProject.srcs/sources_1/new/debounce.v:25]
-INFO: [Synth 8-6155] done synthesizing module 'debounce' (2#1) [C:/Users/ahmed/dldProject/dldProject.srcs/sources_1/new/debounce.v:25]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ahmed/dldProject/dldProject.srcs/sources_1/new/PS2Receiver.v:65]
-INFO: [Synth 8-6155] done synthesizing module 'PS2Receiver' (3#1) [C:/Users/ahmed/dldProject/dldProject.srcs/sources_1/new/PS2Receiver.v:23]
-INFO: [Synth 8-6157] synthesizing module 'pixel_gen' [C:/Users/ahmed/dldProject/dldProject.srcs/sources_1/new/pixel_gen.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (1#1) [C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.srcs/sources_1/new/vga_controller.v:55]
+INFO: [Synth 8-6157] synthesizing module 'PS2Receiver' [C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.srcs/sources_1/new/PS2Receiver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.srcs/sources_1/new/debounce.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (2#1) [C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.srcs/sources_1/new/debounce.v:25]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.srcs/sources_1/new/PS2Receiver.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'PS2Receiver' (3#1) [C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.srcs/sources_1/new/PS2Receiver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'startscreen_gen' [C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.srcs/sources_1/new/startscreen_gen.v:23]
+	Parameter X_MAX bound to: 639 - type: integer 
+	Parameter Y_MAX bound to: 479 - type: integer 
+	Parameter X_WALL_L bound to: 32 - type: integer 
+	Parameter X_WALL_R bound to: 39 - type: integer 
+	Parameter X_BLOCK1_L bound to: 150 - type: integer 
+	Parameter X_BLOCK1_R bound to: 155 - type: integer 
+	Parameter Y_BLOCK1_T bound to: 130 - type: integer 
+	Parameter Y_BLOCK1_B bound to: 190 - type: integer 
+	Parameter X_BLOCK2_L bound to: 150 - type: integer 
+	Parameter X_BLOCK2_R bound to: 210 - type: integer 
+	Parameter Y_BLOCK2_T bound to: 130 - type: integer 
+	Parameter Y_BLOCK2_B bound to: 135 - type: integer 
+	Parameter X_BLOCK3_L bound to: 150 - type: integer 
+	Parameter X_BLOCK3_R bound to: 210 - type: integer 
+	Parameter Y_BLOCK3_T bound to: 185 - type: integer 
+	Parameter Y_BLOCK3_B bound to: 190 - type: integer 
+	Parameter X_BLOCK4_L bound to: 205 - type: integer 
+	Parameter X_BLOCK4_R bound to: 210 - type: integer 
+	Parameter Y_BLOCK4_T bound to: 170 - type: integer 
+	Parameter Y_BLOCK4_B bound to: 190 - type: integer 
+	Parameter X_BLOCK40_L bound to: 195 - type: integer 
+	Parameter X_BLOCK40_R bound to: 210 - type: integer 
+	Parameter Y_BLOCK40_T bound to: 170 - type: integer 
+	Parameter Y_BLOCK40_B bound to: 175 - type: integer 
+	Parameter X_BLOCK21_L bound to: 215 - type: integer 
+	Parameter X_BLOCK21_R bound to: 220 - type: integer 
+	Parameter Y_BLOCK21_T bound to: 130 - type: integer 
+	Parameter Y_BLOCK21_B bound to: 190 - type: integer 
+	Parameter X_BLOCK22_L bound to: 215 - type: integer 
+	Parameter X_BLOCK22_R bound to: 275 - type: integer 
+	Parameter Y_BLOCK22_T bound to: 130 - type: integer 
+	Parameter Y_BLOCK22_B bound to: 135 - type: integer 
+	Parameter X_BLOCK23_L bound to: 270 - type: integer 
+	Parameter X_BLOCK23_R bound to: 275 - type: integer 
+	Parameter Y_BLOCK23_T bound to: 130 - type: integer 
+	Parameter Y_BLOCK23_B bound to: 190 - type: integer 
+	Parameter X_BLOCK31_L bound to: 215 - type: integer 
+	Parameter X_BLOCK31_R bound to: 275 - type: integer 
+	Parameter Y_BLOCK31_T bound to: 160 - type: integer 
+	Parameter Y_BLOCK31_B bound to: 165 - type: integer 
+	Parameter X_BLOCK32_L bound to: 280 - type: integer 
+	Parameter X_BLOCK32_R bound to: 285 - type: integer 
+	Parameter Y_BLOCK32_T bound to: 130 - type: integer 
+	Parameter Y_BLOCK32_B bound to: 190 - type: integer 
+	Parameter X_BLOCK33_L bound to: 335 - type: integer 
+	Parameter X_BLOCK33_R bound to: 340 - type: integer 
+	Parameter Y_BLOCK33_T bound to: 130 - type: integer 
+	Parameter Y_BLOCK33_B bound to: 190 - type: integer 
+	Parameter X_BLOCK34_L bound to: 280 - type: integer 
+	Parameter X_BLOCK34_R bound to: 340 - type: integer 
+	Parameter Y_BLOCK34_T bound to: 130 - type: integer 
+	Parameter Y_BLOCK34_B bound to: 135 - type: integer 
+	Parameter X_BLOCK41_L bound to: 307 - type: integer 
+	Parameter X_BLOCK41_R bound to: 313 - type: integer 
+	Parameter Y_BLOCK41_T bound to: 130 - type: integer 
+	Parameter Y_BLOCK41_B bound to: 150 - type: integer 
+	Parameter X_BLOCK42_L bound to: 345 - type: integer 
+	Parameter X_BLOCK42_R bound to: 350 - type: integer 
+	Parameter Y_BLOCK42_T bound to: 130 - type: integer 
+	Parameter Y_BLOCK42_B bound to: 190 - type: integer 
+	Parameter X_BLOCK43_L bound to: 345 - type: integer 
+	Parameter X_BLOCK43_R bound to: 405 - type: integer 
+	Parameter Y_BLOCK43_T bound to: 130 - type: integer 
+	Parameter Y_BLOCK43_B bound to: 135 - type: integer 
+	Parameter X_BLOCK44_L bound to: 345 - type: integer 
+	Parameter X_BLOCK44_R bound to: 405 - type: integer 
+	Parameter Y_BLOCK44_T bound to: 185 - type: integer 
+	Parameter Y_BLOCK44_B bound to: 190 - type: integer 
+	Parameter X_BLOCK45_L bound to: 345 - type: integer 
+	Parameter X_BLOCK45_R bound to: 405 - type: integer 
+	Parameter Y_BLOCK45_T bound to: 157 - type: integer 
+	Parameter Y_BLOCK45_B bound to: 163 - type: integer 
+	Parameter X_BLOCK42E_L bound to: 150 - type: integer 
+	Parameter X_BLOCK42E_R bound to: 210 - type: integer 
+	Parameter Y_BLOCK42E_T bound to: 60 - type: integer 
+	Parameter Y_BLOCK42E_B bound to: 65 - type: integer 
+	Parameter X_BLOCK43E_L bound to: 150 - type: integer 
+	Parameter X_BLOCK43E_R bound to: 210 - type: integer 
+	Parameter Y_BLOCK43E_T bound to: 115 - type: integer 
+	Parameter Y_BLOCK43E_B bound to: 120 - type: integer 
+	Parameter X_BLOCK44E_L bound to: 150 - type: integer 
+	Parameter X_BLOCK44E_R bound to: 210 - type: integer 
+	Parameter Y_BLOCK44E_T bound to: 87 - type: integer 
+	Parameter Y_BLOCK44E_B bound to: 93 - type: integer 
+	Parameter X_BLOCK45E_L bound to: 150 - type: integer 
+	Parameter X_BLOCK45E_R bound to: 155 - type: integer 
+	Parameter Y_BLOCK45E_T bound to: 60 - type: integer 
+	Parameter Y_BLOCK45E_B bound to: 87 - type: integer 
+	Parameter X_BLOCK46E_L bound to: 205 - type: integer 
+	Parameter X_BLOCK46E_R bound to: 210 - type: integer 
+	Parameter Y_BLOCK46E_T bound to: 87 - type: integer 
+	Parameter Y_BLOCK46E_B bound to: 120 - type: integer 
+	Parameter X_BLOCK42N_L bound to: 215 - type: integer 
+	Parameter X_BLOCK42N_R bound to: 275 - type: integer 
+	Parameter Y_BLOCK42N_T bound to: 60 - type: integer 
+	Parameter Y_BLOCK42N_B bound to: 65 - type: integer 
+	Parameter X_BLOCK43N_L bound to: 242 - type: integer 
+	Parameter X_BLOCK43N_R bound to: 248 - type: integer 
+	Parameter Y_BLOCK43N_T bound to: 60 - type: integer 
+	Parameter Y_BLOCK43N_B bound to: 120 - type: integer 
+	Parameter X_BLOCK21A_L bound to: 280 - type: integer 
+	Parameter X_BLOCK21A_R bound to: 285 - type: integer 
+	Parameter Y_BLOCK21A_T bound to: 60 - type: integer 
+	Parameter Y_BLOCK21A_B bound to: 120 - type: integer 
+	Parameter X_BLOCK22A_L bound to: 280 - type: integer 
+	Parameter X_BLOCK22A_R bound to: 340 - type: integer 
+	Parameter Y_BLOCK22A_T bound to: 60 - type: integer 
+	Parameter Y_BLOCK22A_B bound to: 65 - type: integer 
+	Parameter X_BLOCK23A_L bound to: 335 - type: integer 
+	Parameter X_BLOCK23A_R bound to: 340 - type: integer 
+	Parameter Y_BLOCK23A_T bound to: 60 - type: integer 
+	Parameter Y_BLOCK23A_B bound to: 120 - type: integer 
+	Parameter X_BLOCK31A_L bound to: 280 - type: integer 
+	Parameter X_BLOCK31A_R bound to: 340 - type: integer 
+	Parameter Y_BLOCK31A_T bound to: 90 - type: integer 
+	Parameter Y_BLOCK31A_B bound to: 95 - type: integer 
+	Parameter X_BLOCK32R_L bound to: 345 - type: integer 
+	Parameter X_BLOCK32R_R bound to: 350 - type: integer 
+	Parameter Y_BLOCK32R_T bound to: 60 - type: integer 
+	Parameter Y_BLOCK32R_B bound to: 120 - type: integer 
+	Parameter X_BLOCK33R_L bound to: 345 - type: integer 
+	Parameter X_BLOCK33R_R bound to: 405 - type: integer 
+	Parameter Y_BLOCK33R_T bound to: 65 - type: integer 
+	Parameter Y_BLOCK33R_B bound to: 70 - type: integer 
+	Parameter X_BLOCK42T_L bound to: 410 - type: integer 
+	Parameter X_BLOCK42T_R bound to: 470 - type: integer 
+	Parameter Y_BLOCK42T_T bound to: 60 - type: integer 
+	Parameter Y_BLOCK42T_B bound to: 65 - type: integer 
+	Parameter X_BLOCK43T_L bound to: 437 - type: integer 
+	Parameter X_BLOCK43T_R bound to: 443 - type: integer 
+	Parameter Y_BLOCK43T_T bound to: 60 - type: integer 
+	Parameter Y_BLOCK43T_B bound to: 120 - type: integer 
+	Parameter X_PAD_L bound to: 600 - type: integer 
+	Parameter X_PAD_R bound to: 603 - type: integer 
+	Parameter PAD_HEIGHT bound to: 72 - type: integer 
+	Parameter PAD_VELOCITY bound to: 3 - type: integer 
+	Parameter BALL_SIZE bound to: 8 - type: integer 
+	Parameter BALL_VELOCITY_POS bound to: 1 - type: integer 
+	Parameter BALL_VELOCITY_NEG bound to: -1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'startscreen_gen' (4#1) [C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.srcs/sources_1/new/startscreen_gen.v:23]
+INFO: [Synth 8-6157] synthesizing module 'pixel_gen' [C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.srcs/sources_1/new/pixel_gen.v:4]
 	Parameter X_MAX bound to: 639 - type: integer 
 	Parameter Y_MAX bound to: 479 - type: integer 
 	Parameter X_WALL_L bound to: 32 - type: integer 
@@ -107,83 +251,225 @@ INFO: [Synth 8-6157] synthesizing module 'pixel_gen' [C:/Users/ahmed/dldProject/
 	Parameter BALL_SIZE bound to: 8 - type: integer 
 	Parameter BALL_VELOCITY_POS bound to: 1 - type: integer 
 	Parameter BALL_VELOCITY_NEG bound to: -1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'pixel_gen' (4#1) [C:/Users/ahmed/dldProject/dldProject.srcs/sources_1/new/pixel_gen.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'TopLevelModule' (5#1) [C:/Users/ahmed/dldProject/dldProject.srcs/sources_1/new/TopLevelModule.v:23]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register y_pad_reg_reg in module pixel_gen. [C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.srcs/sources_1/new/pixel_gen.v:157]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register x_ball_reg_reg in module pixel_gen. [C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.srcs/sources_1/new/pixel_gen.v:158]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register y_ball_reg_reg in module pixel_gen. [C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.srcs/sources_1/new/pixel_gen.v:159]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register x_delta_reg_reg in module pixel_gen. [C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.srcs/sources_1/new/pixel_gen.v:160]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register y_delta_reg_reg in module pixel_gen. [C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.srcs/sources_1/new/pixel_gen.v:161]
+CRITICAL WARNING: [Synth 8-5413] Mix of synchronous and asynchronous control for register y_pad_next_reg in module pixel_gen. [C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.srcs/sources_1/new/pixel_gen.v:171]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_gen' (5#1) [C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.srcs/sources_1/new/pixel_gen.v:4]
+WARNING: [Synth 8-689] width (12) of port connection 'endgame' does not match port width (1) of module 'pixel_gen' [C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.srcs/sources_1/new/TopLevelModule.v:122]
+INFO: [Synth 8-6157] synthesizing module 'endscreen_gen' [C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.srcs/sources_1/new/endscreen_gen.v:3]
+	Parameter X_MAX bound to: 639 - type: integer 
+	Parameter Y_MAX bound to: 479 - type: integer 
+	Parameter X_WALL_L bound to: 32 - type: integer 
+	Parameter X_WALL_R bound to: 39 - type: integer 
+	Parameter X_BLOCK1_L bound to: 150 - type: integer 
+	Parameter X_BLOCK1_R bound to: 155 - type: integer 
+	Parameter Y_BLOCK1_T bound to: 60 - type: integer 
+	Parameter Y_BLOCK1_B bound to: 120 - type: integer 
+	Parameter X_BLOCK2_L bound to: 150 - type: integer 
+	Parameter X_BLOCK2_R bound to: 210 - type: integer 
+	Parameter Y_BLOCK2_T bound to: 60 - type: integer 
+	Parameter Y_BLOCK2_B bound to: 65 - type: integer 
+	Parameter X_BLOCK3_L bound to: 150 - type: integer 
+	Parameter X_BLOCK3_R bound to: 210 - type: integer 
+	Parameter Y_BLOCK3_T bound to: 115 - type: integer 
+	Parameter Y_BLOCK3_B bound to: 120 - type: integer 
+	Parameter X_BLOCK4_L bound to: 205 - type: integer 
+	Parameter X_BLOCK4_R bound to: 210 - type: integer 
+	Parameter Y_BLOCK4_T bound to: 100 - type: integer 
+	Parameter Y_BLOCK4_B bound to: 120 - type: integer 
+	Parameter X_BLOCK40_L bound to: 195 - type: integer 
+	Parameter X_BLOCK40_R bound to: 210 - type: integer 
+	Parameter Y_BLOCK40_T bound to: 100 - type: integer 
+	Parameter Y_BLOCK40_B bound to: 105 - type: integer 
+	Parameter X_BLOCK21_L bound to: 215 - type: integer 
+	Parameter X_BLOCK21_R bound to: 220 - type: integer 
+	Parameter Y_BLOCK21_T bound to: 60 - type: integer 
+	Parameter Y_BLOCK21_B bound to: 120 - type: integer 
+	Parameter X_BLOCK22_L bound to: 215 - type: integer 
+	Parameter X_BLOCK22_R bound to: 275 - type: integer 
+	Parameter Y_BLOCK22_T bound to: 60 - type: integer 
+	Parameter Y_BLOCK22_B bound to: 65 - type: integer 
+	Parameter X_BLOCK23_L bound to: 270 - type: integer 
+	Parameter X_BLOCK23_R bound to: 275 - type: integer 
+	Parameter Y_BLOCK23_T bound to: 60 - type: integer 
+	Parameter Y_BLOCK23_B bound to: 120 - type: integer 
+	Parameter X_BLOCK31_L bound to: 215 - type: integer 
+	Parameter X_BLOCK31_R bound to: 275 - type: integer 
+	Parameter Y_BLOCK31_T bound to: 90 - type: integer 
+	Parameter Y_BLOCK31_B bound to: 95 - type: integer 
+	Parameter X_BLOCK32_L bound to: 280 - type: integer 
+	Parameter X_BLOCK32_R bound to: 285 - type: integer 
+	Parameter Y_BLOCK32_T bound to: 60 - type: integer 
+	Parameter Y_BLOCK32_B bound to: 120 - type: integer 
+	Parameter X_BLOCK33_L bound to: 335 - type: integer 
+	Parameter X_BLOCK33_R bound to: 340 - type: integer 
+	Parameter Y_BLOCK33_T bound to: 60 - type: integer 
+	Parameter Y_BLOCK33_B bound to: 120 - type: integer 
+	Parameter X_BLOCK34_L bound to: 280 - type: integer 
+	Parameter X_BLOCK34_R bound to: 340 - type: integer 
+	Parameter Y_BLOCK34_T bound to: 60 - type: integer 
+	Parameter Y_BLOCK34_B bound to: 65 - type: integer 
+	Parameter X_BLOCK41_L bound to: 307 - type: integer 
+	Parameter X_BLOCK41_R bound to: 313 - type: integer 
+	Parameter Y_BLOCK41_T bound to: 60 - type: integer 
+	Parameter Y_BLOCK41_B bound to: 80 - type: integer 
+	Parameter X_BLOCK42_L bound to: 345 - type: integer 
+	Parameter X_BLOCK42_R bound to: 350 - type: integer 
+	Parameter Y_BLOCK42_T bound to: 60 - type: integer 
+	Parameter Y_BLOCK42_B bound to: 120 - type: integer 
+	Parameter X_BLOCK43_L bound to: 345 - type: integer 
+	Parameter X_BLOCK43_R bound to: 405 - type: integer 
+	Parameter Y_BLOCK43_T bound to: 60 - type: integer 
+	Parameter Y_BLOCK43_B bound to: 65 - type: integer 
+	Parameter X_BLOCK44_L bound to: 345 - type: integer 
+	Parameter X_BLOCK44_R bound to: 405 - type: integer 
+	Parameter Y_BLOCK44_T bound to: 115 - type: integer 
+	Parameter Y_BLOCK44_B bound to: 120 - type: integer 
+	Parameter X_BLOCK45_L bound to: 345 - type: integer 
+	Parameter X_BLOCK45_R bound to: 405 - type: integer 
+	Parameter Y_BLOCK45_T bound to: 87 - type: integer 
+	Parameter Y_BLOCK45_B bound to: 93 - type: integer 
+	Parameter X_BLOCK42E_L bound to: 150 - type: integer 
+	Parameter X_BLOCK42E_R bound to: 155 - type: integer 
+	Parameter Y_BLOCK42E_T bound to: 130 - type: integer 
+	Parameter Y_BLOCK42E_B bound to: 190 - type: integer 
+	Parameter X_BLOCK43E_L bound to: 150 - type: integer 
+	Parameter X_BLOCK43E_R bound to: 210 - type: integer 
+	Parameter Y_BLOCK43E_T bound to: 130 - type: integer 
+	Parameter Y_BLOCK43E_B bound to: 135 - type: integer 
+	Parameter X_BLOCK44E_L bound to: 150 - type: integer 
+	Parameter X_BLOCK44E_R bound to: 210 - type: integer 
+	Parameter Y_BLOCK44E_T bound to: 185 - type: integer 
+	Parameter Y_BLOCK44E_B bound to: 190 - type: integer 
+	Parameter X_BLOCK45E_L bound to: 150 - type: integer 
+	Parameter X_BLOCK45E_R bound to: 210 - type: integer 
+	Parameter Y_BLOCK45E_T bound to: 157 - type: integer 
+	Parameter Y_BLOCK45E_B bound to: 163 - type: integer 
+	Parameter X_BLOCK42N_L bound to: 215 - type: integer 
+	Parameter X_BLOCK42N_R bound to: 220 - type: integer 
+	Parameter Y_BLOCK42N_T bound to: 130 - type: integer 
+	Parameter Y_BLOCK42N_B bound to: 190 - type: integer 
+	Parameter X_BLOCK43N_L bound to: 270 - type: integer 
+	Parameter X_BLOCK43N_R bound to: 275 - type: integer 
+	Parameter Y_BLOCK43N_T bound to: 130 - type: integer 
+	Parameter Y_BLOCK43N_B bound to: 190 - type: integer 
+	Parameter X_BLOCK44N_L bound to: 215 - type: integer 
+	Parameter X_BLOCK44N_R bound to: 275 - type: integer 
+	Parameter Y_BLOCK44N_T bound to: 130 - type: integer 
+	Parameter Y_BLOCK44N_B bound to: 135 - type: integer 
+	Parameter X_BLOCK21D_L bound to: 280 - type: integer 
+	Parameter X_BLOCK21D_R bound to: 290 - type: integer 
+	Parameter Y_BLOCK21D_T bound to: 130 - type: integer 
+	Parameter Y_BLOCK21D_B bound to: 190 - type: integer 
+	Parameter X_BLOCK22D_L bound to: 280 - type: integer 
+	Parameter X_BLOCK22D_R bound to: 340 - type: integer 
+	Parameter Y_BLOCK22D_T bound to: 130 - type: integer 
+	Parameter Y_BLOCK22D_B bound to: 135 - type: integer 
+	Parameter X_BLOCK23D_L bound to: 335 - type: integer 
+	Parameter X_BLOCK23D_R bound to: 340 - type: integer 
+	Parameter Y_BLOCK23D_T bound to: 130 - type: integer 
+	Parameter Y_BLOCK23D_B bound to: 190 - type: integer 
+	Parameter X_BLOCK31D_L bound to: 280 - type: integer 
+	Parameter X_BLOCK31D_R bound to: 340 - type: integer 
+	Parameter Y_BLOCK31D_T bound to: 185 - type: integer 
+	Parameter Y_BLOCK31D_B bound to: 190 - type: integer 
+	Parameter X_PAD_L bound to: 600 - type: integer 
+	Parameter X_PAD_R bound to: 603 - type: integer 
+	Parameter PAD_HEIGHT bound to: 72 - type: integer 
+	Parameter PAD_VELOCITY bound to: 3 - type: integer 
+	Parameter BALL_SIZE bound to: 8 - type: integer 
+	Parameter BALL_VELOCITY_POS bound to: 1 - type: integer 
+	Parameter BALL_VELOCITY_NEG bound to: -1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'endscreen_gen' (6#1) [C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.srcs/sources_1/new/endscreen_gen.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'TopLevelModule' (7#1) [C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.srcs/sources_1/new/TopLevelModule.v:4]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1024.387 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1024.730 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1024.387 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1024.730 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1024.387 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1024.730 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1024.387 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1024.730 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/ahmed/dldProject/dldProject.srcs/constrs_1/new/constraints_dldproj.xdc]
-Finished Parsing XDC File [C:/Users/ahmed/dldProject/dldProject.srcs/constrs_1/new/constraints_dldproj.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/ahmed/dldProject/dldProject.srcs/constrs_1/new/constraints_dldproj.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TopLevelModule_propImpl.xdc].
+Parsing XDC File [C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.srcs/constrs_1/new/constraints_dldproj.xdc]
+Finished Parsing XDC File [C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.srcs/constrs_1/new/constraints_dldproj.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.srcs/constrs_1/new/constraints_dldproj.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TopLevelModule_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/TopLevelModule_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1038.750 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1047.859 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1038.750 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1047.859 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1038.750 ; gain = 14.363
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1047.859 ; gain = 23.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1038.750 ; gain = 14.363
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1047.859 ; gain = 23.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1038.750 ; gain = 14.363
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1047.859 ; gain = 23.129
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'TopLevelModule'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+      START_SCREEN_STATE |                              001 |                               00
+              GAME_STATE |                              010 |                               01
+        END_SCREEN_STATE |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'TopLevelModule'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1038.750 ; gain = 14.363
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1047.859 ; gain = 23.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   10 Bit       Adders := 8     
+	   2 Input   10 Bit       Adders := 18    
 	   2 Input    4 Bit       Adders := 1     
-	   3 Input    3 Bit       Adders := 2     
+	   3 Input    3 Bit       Adders := 6     
 	   2 Input    2 Bit       Adders := 1     
 +---Registers : 
 	               16 Bit    Registers := 1     
-	               12 Bit    Registers := 1     
-	               10 Bit    Registers := 10    
+	               10 Bit    Registers := 20    
 	                8 Bit    Registers := 2     
 	                4 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 17    
+	                1 Bit    Registers := 18    
 +---Muxes : 
-	   6 Input   12 Bit        Muxes := 1     
-	   2 Input   10 Bit        Muxes := 14    
+	   6 Input   12 Bit        Muxes := 3     
+	   3 Input   12 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 36    
 	   3 Input   10 Bit        Muxes := 1     
 	   5 Input   10 Bit        Muxes := 2     
-	   8 Input    8 Bit        Muxes := 1     
+	   8 Input    8 Bit        Muxes := 3     
 	   2 Input    4 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 19    
-	   3 Input    1 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 37    
+	   3 Input    1 Bit        Muxes := 2     
 	  12 Input    1 Bit        Muxes := 2     
-	   7 Input    1 Bit        Muxes := 11    
+	   7 Input    1 Bit        Muxes := 12    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -200,25 +486,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1038.750 ; gain = 14.363
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1047.859 ; gain = 23.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1038.750 ; gain = 14.363
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1047.859 ; gain = 23.129
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1054.004 ; gain = 29.617
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1056.430 ; gain = 31.699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1063.074 ; gain = 38.688
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1073.559 ; gain = 48.828
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -236,37 +522,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1066.836 ; gain = 42.449
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1079.383 ; gain = 54.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1066.836 ; gain = 42.449
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1079.383 ; gain = 54.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1066.836 ; gain = 42.449
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1079.383 ; gain = 54.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1066.836 ; gain = 42.449
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1079.383 ; gain = 54.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1066.836 ; gain = 42.449
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1079.383 ; gain = 54.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1066.836 ; gain = 42.449
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1079.383 ; gain = 54.652
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -283,41 +569,41 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |    25|
-|3     |LUT1   |     6|
-|4     |LUT2   |    35|
-|5     |LUT3   |    28|
-|6     |LUT4   |   100|
-|7     |LUT5   |    61|
-|8     |LUT6   |   144|
-|9     |FDCE   |    81|
-|10    |FDPE   |    18|
-|11    |FDRE   |    38|
-|12    |LDC    |    11|
+|2     |CARRY4 |    71|
+|3     |LUT1   |    10|
+|4     |LUT2   |    97|
+|5     |LUT3   |    79|
+|6     |LUT4   |   264|
+|7     |LUT5   |   177|
+|8     |LUT6   |   426|
+|9     |FDCE   |   137|
+|10    |FDPE   |    33|
+|11    |FDRE   |    36|
+|12    |LDC    |    13|
 |13    |IBUF   |     3|
 |14    |OBUF   |    15|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1066.836 ; gain = 42.449
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1079.383 ; gain = 54.652
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 1066.836 ; gain = 28.086
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1066.836 ; gain = 42.449
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:35 . Memory (MB): peak = 1079.383 ; gain = 31.523
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1079.383 ; gain = 54.652
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1078.883 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 36 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1091.449 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 84 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1078.883 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1091.449 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 11 instances were transformed.
-  LDC => LDCE: 11 instances
+  A total of 13 instances were transformed.
+  LDC => LDCE: 13 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-26 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+32 Infos, 1 Warnings, 6 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1078.883 ; gain = 54.496
-INFO: [Common 17-1381] The checkpoint 'C:/Users/ahmed/dldProject/dldProject.runs/synth_1/TopLevelModule.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 1091.449 ; gain = 66.719
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.runs/synth_1/TopLevelModule.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file TopLevelModule_utilization_synth.rpt -pb TopLevelModule_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Nov 21 15:56:45 2024...
+INFO: [Common 17-206] Exiting Vivado at Sat Nov 23 23:34:32 2024...

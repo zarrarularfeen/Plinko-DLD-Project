@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/ahmed/dldProject/dldProject.runs/synth_1'
+HD_PWD='C:/Users/ahmed/Desktop/Plinko-DLD-Project-toplevelchange/Plinko-DLD-Project-toplevelchange/dldProject.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
