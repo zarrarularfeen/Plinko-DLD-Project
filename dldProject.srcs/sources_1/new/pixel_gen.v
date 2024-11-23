@@ -11,6 +11,7 @@ module pixel_gen(
     input [9:0] x,
     input [9:0] y,
     output reg [11:0] rgb
+    input enable
     );
     
     // maximum x, y values in display area

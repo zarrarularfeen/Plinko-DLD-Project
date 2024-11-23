@@ -118,7 +118,7 @@ input clk_100MHz,       // from Basys 3
                  .video_on(w_vid_on), .x(w_x), .y(w_y), .rgb(start_rgb));
     
     pixel_gen pg(.clk(clk_100MHz),.reset(w_back),.start(w_start), .up(w_up), .down(w_down), 
-                 .video_on(w_vid_on), .x(w_x), .y(w_y), .rgb(game_rgb));
+                 .video_on(w_vid_on), .x(w_x), .y(w_y), .rgb(game_rgb), .enable(enable_game));
                  
     endscreen_gen eg(.clk(clk_100MHz),.reset(w_back),.start(w_start), .up(w_up), .down(w_down), 
                  .video_on(w_vid_on), .x(w_x), .y(w_y), .rgb(end_rgb));
