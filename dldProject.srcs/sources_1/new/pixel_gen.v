@@ -10,7 +10,7 @@ module pixel_gen(
     input video_on,
     input [9:0] x,
     input [9:0] y,
-    output reg [11:0] rgb
+    output reg [11:0] rgb,
     input enable
     );
     

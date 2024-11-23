@@ -13,3 +13,4 @@ start_gui
 open_project {C:/Users/NM TRADERS/Documents/Courses Assignments/Fall Semester 2024 - 3/CS 130 - Digital Logic and Design/dldProject/Plinko-DLD-Project/dldProject.xpr}
 update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
